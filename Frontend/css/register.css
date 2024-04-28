@@ -1,0 +1,54 @@
+.register{
+    display: flex;
+    height: 100vh;
+}
+
+.left-side{
+    width: 750px;
+    background-image: url("/Frontend/images/register-background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100vh; 
+    
+}
+.left-side h1{
+    color: white;
+    font-size: 29px;
+}
+.left-side-content-top{
+    position: relative;
+    top: 1%;
+    right: -3%;
+}
+.left-side-content-mid{
+    position: relative;
+    top: 40%;
+    right: -12%;
+    width: 80%;
+}
+
+.left-side h2{
+    color: white;
+    font-size: 38px;
+}
+.left-side h5{
+    color: white;
+    font-size: 16px;
+    margin-bottom: -10px;
+}
+.left-side h6{
+    color: white;
+    font-size: 10px;
+    margin-top: 35px;
+}
+
+.left-side-content{
+    background-color: red;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.63);
+}
+
+.right-side{
+    width: 1020px;
+    background-color: blue;
+
+}
