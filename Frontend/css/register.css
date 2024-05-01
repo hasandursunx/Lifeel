@@ -4,7 +4,7 @@
 }
 
 .left-side{
-    width: 750px;
+    width: 45%;
     background-image: url("/Frontend/images/register-background.png");
     background-repeat: no-repeat;
     background-size: 100% 100vh; 
@@ -47,8 +47,90 @@
     background-color: rgba(0, 0, 0, 0.63);
 }
 
-.right-side{
-    width: 1020px;
-    background-color: blue;
 
+/* Sağ taraf - form */ 
+
+.right-side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    height: 100vh;
+}
+
+.right-side-top h1{
+    color: #1B1C40;
+    font-weight: 700;
+    size: 36px;
+    margin-bottom: 35px;
+}
+
+.right-side-middle form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.right-side-middle  #email,#date,#password,select {
+    font-family: "Mulish", sans-serif;
+    font-size: 16px;
+    width: 350px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #C8D1E5;
+    border-radius: 5px;
+    outline-color: #abb3c4;
+    padding: 0px 10px;
+    margin-bottom: 30px;
+    color: #1E2C4B;
+
+}
+
+.right-side-middle  #isim,#soyisim {
+    font-family: "Mulish", sans-serif;
+    font-size: 16px;
+    width: 172px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #C8D1E5;
+    border-radius: 5px;
+    outline-color: #abb3c4;
+    padding: 0px 10px;
+    margin-bottom: 30px;
+    color: #1E2C4B;
+
+}
+
+.right-side-middle button {
+    font-family: "Mulish", sans-serif;
+    font-size: 16px;
+    color: white;
+    width: 350px;
+    height: 40px;
+    background-color: #2DCC39;
+    border-radius: 5px;
+    border: none;
+    padding: 0px 10px;
+    margin-bottom: 30px;
+    
+
+}
+
+.right-side-middle button:hover {
+    
+    background-color: #26aa31;
+    cursor: pointer;
+
+    
+}
+
+.right-side-bottom{
+    font-family: "Mulish", sans-serif;
+    width: 350px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #1E2C4B;
+    text-align: center;
 }

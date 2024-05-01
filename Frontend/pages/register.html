@@ -24,26 +24,25 @@
         <div class="right-side">
             <div class="right-side-top"><h1>KAYIT OL</h1></div>
             <div class="right-side-middle">
-                <form action="#">
-                    <input type="text" placeholder="İsim">
-                    <input type="text" placeholder="Soyisim">
-                    <label for="cars">Choose a car:</label>
-        
+                <form action="#" >
+
+                    <div id="right-side-middle-name-surname">
+                        <input id="isim" type="text" placeholder="İsim">
+                        <input id="soyisim" type="text" placeholder="Soyisim">
+                    </div>
+                    
                     <select name="gender" id="gender">
                       <option selected value="sec">Cinsiyet seçin</option>
                       <option value="erkek">Erkek</option>
                       <option value="kadın">Kadın</option>
                     </select>
         
-                    <input type="date" name="date" id="date" >
+                    <input type="date" name="date" id="date" value="2000-01-01" >
         
                     <input type="email" name="email" id="email" placeholder="Eposta">
-                    <input type="password" placeholder="Şifre">
+                    <input type="password"  id="password" placeholder="Şifre">
         
-                    <div class="agreement">
-                        <input type="checkbox" name="checkbox" id="checkbox">
-                        <span> Sözleşmeyi okudum ve kabul ediyorum. </span>
-                    </div>
+                    
         
                     <button type="submit">Hesap Oluştur</button>
                 </form>
