@@ -1,0 +1,119 @@
+body{
+    background-image: url("/Frontend/images/login-background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Mulish", "sans-serif";
+
+}
+.main-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+.main-form{
+    width: 400px;
+    height: 460px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.main-form-top h1{
+    font-size: 32px;
+    font-weight: 700;
+    color: #1B1C40;
+    margin-top: 40px;
+    margin-bottom: 5px;
+}
+
+.main-form-middle form{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.main-form-middle form input{
+    width: 280px;
+    height: 45px;
+    border-radius: 5px;
+    color: #1B1C40;
+    font-weight: 400;
+    font-size: 14px;
+    border: 2px solid #C8D1E5;
+    margin-top: 20px;
+    padding: 0px 10px;
+
+}
+
+
+.main-form-middle form input:focus{
+    
+    border: 2px solid #8094bf;
+    outline: #9ab5ef;
+}
+
+.main-form-middle form a{
+    display: block;
+    font-size: 12px;
+    margin-top: 2px;
+    text-decoration: none;
+    color: #262DCD;
+
+}
+
+.main-form-bottom{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-form-bottom a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 45px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800px;
+    font-size: 16px;
+    margin-bottom: 10px;
+
+}
+
+.main-form-bottom a:first-child {
+    background-color: #2DCC39;
+}
+
+.main-form-bottom a:last-child {
+    background-color: #828282;
+}
+
+.main-form-bottom a:first-child:hover {
+    background-color: #27b733;
+}
+
+.main-form-bottom a:last-child:hover {
+    background-color: #767575;
+}
+
+
+.main-form-bottom span{
+    font-weight: 800;
+    font-size: 14px;
+    color: #828282;
+    margin-bottom: 10px;
+}
