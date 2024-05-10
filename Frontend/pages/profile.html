@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <link rel="stylesheet" href="/Frontend/css/reset.css">
+    <link rel="stylesheet" href="/Frontend/css/profile.css">
+</head>
+<body> 
+    <div class="header">
+        <div class="header-logo">
+            <a href="#">
+                <img id="header-logo-img" src="/Frontend/images/lifeel-logo.png" alt="bu bir logodur.">
+                <h1 id="header-logo-title"> Lifeel </h1>
+            </a>
+        </div>
+        <div class="header-menu">
+            <ul>
+                <li><a href="#">Anasayfa</a></li>
+                <li><a href="#">Hizmetler</a></li>
+                <li><a href="#">Topluluk</a></li>
+                <li><a href="#">Hakkımızda</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+        </div>
+        <div class="header-operations">
+            <a href="#">
+                <img id="header-operations-logo" src="/Frontend/images/notifications-logo.png" alt="">
+            </a>
+            <a id="header-operations-button" href="#">HESABIM</a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-menu">
+            <ul>
+                <li><a href="#">Profil Görüntüle</a></li>
+                <li><a href="#">Profil Detayları</a></li>
+                <li><a href="#">Spor Programlarım</a></li>
+                <li><a href="#">Beslenme Programlarım</a></li>
+                <li><a href="#">Performans ve Analiz</a></li>
+            </ul>
+        </div>
+        <div class="main-vertical-stick"></div>
+        <div class="main-profile-information">
+            <div class="main-profile-information-left">
+                <img src="/Frontend/images/profile-avatar.png" alt="">
+                <span>Hasan Dursun</span>
+                <a href="#">ŞİFRE DEĞİŞTİR</a>
+            </div>
+            <div class="main-profile-information-right">
+                <form action="#">
+                    <div class="main-profile-information-right-form-top">
+                        <div id="main-profile-information-right-form-top-name">
+                            <span>İsim</span>
+                            <input disabled type="text" placeholder="Hasan">
+                        </div>
+                        <div id="main-profile-information-right-form-top-surname">
+                            <span>Soyisim</span>
+                            <input disabled type="text" placeholder="Dursun">
+                        </div>
+                    </div>
+                    <div class="main-profile-information-right-form-mid">
+                        <div id="main-profile-information-right-form-mid-email">
+                            <span>Eposta</span>
+                            <input  disabled type="email" placeholder="hayatihisset@lifeel.com">
+                        </div>
+                    </div>
+                    <div class="main-profile-information-right-form-bot">
+                        <div id="main-profile-information-right-form-bot-name">
+                            <span>Doğum Tarihi</span>
+                            <input disabled ="date" value="2000-01-01">
+                        </div>
+                        <div id="main-profile-information-right-form-top-surname">
+                            <span>Cinsiyet</span>
+                            <input disabled type="text" placeholder="Erkek">
+                        </div>
+                    </div>
+                    <button type="submit">Profil Düzenle</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
