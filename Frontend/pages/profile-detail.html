@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Detayları</title>
+    <link rel="stylesheet" href="/Frontend/css/reset.css">
+    <link rel="stylesheet" href="/Frontend/css/profile-detail.css">
+</head>
+<body> 
+    <div class="header">
+        <div class="header-logo">
+            <a href="#">
+                <img id="header-logo-img" src="/Frontend/images/lifeel-logo.png" alt="bu bir logodur.">
+                <h1 id="header-logo-title"> Lifeel </h1>
+            </a>
+        </div>
+        <div class="header-menu">
+            <ul>
+                <li><a href="#">Anasayfa</a></li>
+                <li><a href="#">Hizmetler</a></li>
+                <li><a href="#">Topluluk</a></li>
+                <li><a href="#">Hakkımızda</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+        </div>
+        <div class="header-operations">
+            <a href="#">
+                <img id="header-operations-logo" src="/Frontend/images/notifications-logo.png" alt="">
+            </a>
+            <a id="header-operations-button" href="#">HESABIM</a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-menu">
+            <ul>
+                <li><a href="#">Profil Görüntüle</a></li>
+                <li><a href="#">Profil Detayları</a></li>
+                <li><a href="#">Spor Programlarım</a></li>
+                <li><a href="#">Beslenme Programlarım</a></li>
+                <li><a href="#">Performans ve Analiz</a></li>
+            </ul>
+        </div>
+        <div class="main-vertical-stick"></div>
+        <div class="main-profile-information">
+            <div class="main-profile-information-top">
+                <h1>Fiziksel Özelliklerim</h1>
+                <form action="#">
+                    <div class="profile-information-top-form-input">
+                        <span>Boy</span>
+                        <input disabled type="text" placeholder="183cm">
+                    </div>
+                    <div class="profile-information-top-form-input">
+                        <span>Kilo</span>
+                        <input disabled type="text" placeholder="84 kg">
+                    </div>
+                    <div class="profile-information-top-form-input">
+                        <span>Bel Ölçüsü</span>
+                        <input disabled type="text" placeholder="72 cm">
+                    </div>
+                    <div class="profile-information-top-form-input">
+                        <span>Yağ Oranı</span>
+                        <input disabled type="text" placeholder="%15">
+                    </div>
+                    <div class="profile-information-top-form-input">
+                        <span>V. K. Endeksi</span>
+                        <input disabled type="text" placeholder="24 kg/m²"><sup></sup>
+                    </div>
+                    <button type="submit">Düzenle</button>
+                </form>
+            </div>
+            <div class="main-profile-information-mid">
+                <h1>Hobiler ve Aktiviteler</h1>
+                <div class="main-profile-information-mid-cards">
+                    <div class="main-profile-information-mid-card">
+                        <h3>Yüzme</h3>
+                        <ul>
+                            <li> 2 saat </li>
+                            <li> 2 gün / Haftada </li>
+                        </ul>
+                        <div class="main-profile-information-mid-card-buttons">
+                            <a href="#">Düzenle</a>
+                            <a href="#">Sil</a>
+                        </div>
+                    </div>
+                    <div class="main-profile-information-mid-card">
+                        <h3>Basketbol</h3>
+                        <ul>
+                            <li> 45 dakika </li>
+                            <li> 1 gün / Haftada </li>
+                        </ul>
+                        <div class="main-profile-information-mid-card-buttons">
+                            <a href="#">Düzenle</a>
+                            <a href="#">Sil</a>
+                        </div>
+                    </div>
+                    <div id="main-profile-information-mid-card-last">
+                        <a href="#">
+                            <img src="/Frontend/images/profile-detail-plus.png" alt="Tıklayınız.">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="main-profile-information-bot">
+                <h1>Alerjik Yiyecekler</h1>
+                <div class="main-profile-information-bot-cards">
+                    <div class="main-profile-information-bot-card">
+                        <span>Domates</span>
+                        <a href="#">
+                            <img src="/Frontend/images/profile-detail-garbage.png" alt="">
+                        </a>
+                    </div>
+                    <div class="main-profile-information-bot-card">
+                        <span>Avakado</span>
+                        <a href="#">
+                            <img src="/Frontend/images/profile-detail-garbage.png" alt="">
+                        </a>
+                    </div>
+                    <div id="main-profile-information-bot-card-last">
+                        <a href="#">
+                            <img src="/Frontend/images/profile-detail-plus.png" alt="Tıklayınız.">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
