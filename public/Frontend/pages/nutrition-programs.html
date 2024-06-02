@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beslenme Programlarım</title>
-    <link rel="stylesheet" href="/Frontend/css/reset.css">
-    <link rel="stylesheet" href="/Frontend/css/nutrition-programs.css">
+    <link rel="stylesheet" href="/public/Frontend/css/reset.css">
+    <link rel="stylesheet" href="/public/Frontend/css/nutrition-programs.css">
 </head>
 <body> 
     <div class="header">
         <div class="header-logo">
             <a href="#">
-                <img id="header-logo-img" src="/Frontend/images/lifeel-logo.png" alt="bu bir logodur.">
+                <img id="header-logo-img" src="/public/Frontend/images/lifeel-logo.png" alt="bu bir logodur.">
                 <h1 id="header-logo-title"> Lifeel </h1>
             </a>
         </div>
@@ -26,7 +26,7 @@
         </div>
         <div class="header-operations">
             <a href="#">
-                <img id="header-operations-logo" src="/Frontend/images/notifications-logo.png" alt="">
+                <img id="header-operations-logo" src="/public/Frontend/images/notifications-logo.png" alt="">
             </a>
             <a id="header-operations-button" href="#">HESABIM</a>
         </div>
@@ -82,7 +82,7 @@
                             </ul>
                         </div>
                         <span class="main-nutrition-programs-card-top-part">BUGÜN</span>
-                        <a href="#" class="main-nutrition-programs-card-bottom-part">İlerlemeyi Kaydet</a>
+                        <a href="#" id="main-nutrition-programs-card-bottom-part" class="main-nutrition-programs-card-bottom-part">İlerlemeyi Kaydet</a>
                     </div>
                     <div class="main-nutrition-programs-card">
                         <div class="main-nutrition-programs-card-meal">
@@ -120,7 +120,6 @@
                             </ul>
                         </div>
                         <span class="main-nutrition-programs-card-top-part">YARIN</span>
-                        <a href="#" class="main-nutrition-programs-card-bottom-part">İlerlemeyi Kaydet</a>
                     </div>
                 </div>
                 <div class="main-nutrition-programs-see-more">
@@ -145,5 +144,193 @@
             </div> 
         </div>
     </div>
+
+    <!--siyah arka plan-->
+    <div class="popup-nutrition-progress" id="popup-nutrition-progress-1">
+        <!--popup card-->
+        <div class="popup-nutrition-progress-card">
+            <!--popup header-->
+            <div class="popup-nutrition-progress-card-header"> Sabah hangi besinleri tükettiniz ?  </div>
+            <form action="">
+                <ul>
+                    <li>
+                        <input id="popup-nutrition-progress-card-1" type="checkbox">
+                        <label for="popup-nutrition-progress-card-1"> 50 gr peynir </label>
+                    </li>
+                    <li>
+                        <input id="popup-nutrition-progress-card-2" type="checkbox">
+                        <label for="popup-nutrition-progress-card-2"> 8 adet zeytin </label>
+                    </li>
+                    <li>
+                        <input id="popup-nutrition-progress-card-3" type="checkbox">
+                        <label for="popup-nutrition-progress-card-3"> 1 dilim ekmek </label>
+                    </li>
+                    <li>
+                        <input id="popup-nutrition-progress-card-4" type="checkbox">
+                        <label for="popup-nutrition-progress-card-4"> 2 adet yumurta </label>
+                    </li>
+                </ul>
+                <div id="popup-nutrition-progress-card-button">
+                    <button id="popup-nutrition-progress-card-button-next-1" type="submit" >İLERİ</button>
+                </div>
+            </form>
+            <img class="popup-nutrition-progress-card-close" id="popup-nutrition-progress-card-close-1" src="/public/Frontend/images/close.svg" alt="">
+        </div>
+    </div>
+
+    <!--siyah arka plan-->
+    <div class="popup-nutrition-progress" id="popup-nutrition-progress-2">
+        <!--popup card-->
+        <div class="popup-nutrition-progress-card">
+            <!--popup header-->
+            <div class="popup-nutrition-progress-card-header"> Öğlen hangi besinleri tükettiniz ?    </div>
+            <form action="">
+                <ul>
+                    <li>
+                        <input id="popup-nutrition-progress-card-1" type="checkbox">
+                        <label for="popup-nutrition-progress-card-1"> 1  adet muz </label>
+                    </li>
+                    <li>
+                        <input id="popup-nutrition-progress-card-2" type="checkbox">
+                        <label for="popup-nutrition-progress-card-2"> 1 bardak süt </label>
+                    </li>
+                    <li>
+                        <input id="popup-nutrition-progress-card-3" type="checkbox">
+                        <label for="popup-nutrition-progress-card-3">  4 adet ceviz </label>
+                    </li>
+                    <li>
+                        <input id="popup-nutrition-progress-card-4" type="checkbox">
+                        <label for="popup-nutrition-progress-card-4"> 2 kaşık bal </label>
+                    </li>
+                </ul>
+                <div id="popup-nutrition-progress-card-button">
+                    <button id="popup-nutrition-progress-card-button-next-2" type="submit" >İLERİ</button>
+                </div>
+            </form>
+            <img class="popup-nutrition-progress-card-close" id="popup-nutrition-progress-card-close-2" src="/public/Frontend/images/close.svg" alt="">
+        </div>
+    </div>
+
+    <div class="popup-nutrition-progress" id="popup-nutrition-progress-3">
+        <!--popup card-->
+        <div class="popup-nutrition-progress-card">
+            <!--popup header-->
+            <div class="popup-nutrition-progress-card-header"> Akşam hangi besinleri tükettiniz ?      </div>
+            <form action="">
+                <ul>
+                    <li>
+                        <input id="popup-nutrition-progress-card-1" type="checkbox">
+                        <label for="popup-nutrition-progress-card-1"> 200 gr pilav </label>
+                    </li>
+                    <li>
+                        <input id="popup-nutrition-progress-card-2" type="checkbox">
+                        <label for="popup-nutrition-progress-card-2"> 250 gr tavuk </label>
+                    </li>
+                    <li>
+                        <input id="popup-nutrition-progress-card-3" type="checkbox">
+                        <label for="popup-nutrition-progress-card-3">  Mevsim salata </label>
+                    </li>
+                    <li>
+                        <input id="popup-nutrition-progress-card-4" type="checkbox">
+                        <label for="popup-nutrition-progress-card-4"> 1 adet elma </label>
+                    </li>
+                </ul>
+                <div id="popup-nutrition-progress-card-button">
+                    <button id="popup-nutrition-progress-card-button-next-3" type="submit" >İLERİ</button>
+
+                </div>
+            </form>
+            <img class="popup-nutrition-progress-card-close" id="popup-nutrition-progress-card-close-3" src="/public/Frontend/images/close.svg" alt="">
+        </div>
+    </div>
+
+    <!--siyah arka plan-->
+    <div class="popup-nutrition-progress" id="popup-nutrition-progress-4">
+        <!--popup card-->
+        <div class="popup-nutrition-progress-card">
+            <!--popup header-->
+            <div class="popup-nutrition-progress-card-header">Bu ürünleri tüketememeninizin nedeni nedir ? </div>
+            <form action="">
+                <div class="popup-nutrition-progress-card-conclusion-morning">
+                    <div class="popup-nutrition-progress-card-conclusion-header">SABAH</div>
+                    <div class="popup-nutrition-progress-card-conclusion-div">
+                        <ul>
+                            <li>
+                                <img src="/public/Frontend/images/decr.svg" alt="">
+                                <div class="popup-nutrition-progress-card-conclusion-morning-first-ul-li"> 50 gr peynir </div>
+                            </li>
+                            <li>
+                                <img src="/public/Frontend/images/decr.svg" alt="">
+                                <div class="popup-nutrition-progress-card-conclusion-morning-first-ul-li"> 8 adet zeytin </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="popup-nutrition-progress-card-conclusion-div-radioes">
+                        <ul>
+                            <li>
+                                <input name="conclusion-morning-radio" id="conclusion-morning-1" type="radio">
+                                <label for="conclusion-morning-1"> Beğenmedim </label>
+                            </li>
+                            <li>
+                                <input name="conclusion-morning-radio" id="conclusion-morning-2" type="radio">
+                                <label for="conclusion-morning-2"> Unuttum </label>
+                            </li>
+                            <li>
+                                <input name="conclusion-morning-radio" id="conclusion-morning-3" type="radio">
+                                <label for="conclusion-morning-3"> Fazla Geldi </label>
+                            </li>
+                            <li>
+                                <input name="conclusion-morning-radio" id="conclusion-morning-4" type="radio">
+                                <label for="conclusion-morning-4"> Tükendi </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup-nutrition-progress-card-conclusion-morning">
+                    <div class="popup-nutrition-progress-card-conclusion-header">ÖĞLEN</div>
+                    <div class="popup-nutrition-progress-card-conclusion-div">
+                        <ul>
+                            <li>
+                                <img src="/public/Frontend/images/decr.svg" alt="">
+                                <div class="popup-nutrition-progress-card-conclusion-morning-first-ul-li"> 1 adet muz </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="popup-nutrition-progress-card-conclusion-div-radioes">
+                        <ul>
+                            <li>
+                                <input name="conclusion-lunch-radio" id="conclusion-lunch-1" type="radio">
+                                <label for="conclusion-lunch-1"> Beğenmedim </label>
+                            </li>
+                            <li>
+                                <input name="conclusion-lunch-radio" id="conclusion-lunch-2" type="radio">
+                                <label for="conclusion-lunch-2"> Unuttum </label>
+                            </li>
+                            <li>
+                                <input name="conclusion-lunch-radio" id="conclusion-lunch-3" type="radio">
+                                <label for="conclusion-lunch-3"> Fazla Geldi </label>
+                            </li>
+                            <li>
+                                <input name="conclusion-lunch-radio" id="conclusion-lunch-4" type="radio">
+                                <label for="conclusion-lunch-4"> Tükendi </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup-nutrition-progress-card-conclusion-morning">
+                    <div class="popup-nutrition-progress-card-conclusion-header">AKŞAM</div>
+                    <div class="popup-nutrition-progress-card-conclusion-full">
+                        <img src="/public/Frontend/images/checked.svg" alt="">
+                        <div class="popup-nutrition-progress-card-conclusion-full-text">Tüm öğün tamamlandı</div>
+                    </div>
+                </div>
+                <div id="popup-nutrition-progress-card-button">
+                    <button id="popup-nutrition-progress-card-button-next-3" type="submit" >BİTİR </button>
+                </div>
+            </form>
+            <img class="popup-nutrition-progress-card-close" id="popup-nutrition-progress-card-close-4" src="/public/Frontend/images/close.svg" alt="">
+        </div>
+    </div>
+    <script src="/public/Frontend/js/popup-nutrition.js"></script>
 </body>
 </html>

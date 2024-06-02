@@ -344,3 +344,124 @@
     color: #000000;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 25%);
 }
+
+/*popups */
+
+/*popup-1*/
+
+.popup-nutrition-progress{
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    display: none;  
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-nutrition-progress-card{
+    position: relative;
+    width: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 35px 25px 25px 25px;
+}
+
+.popup-nutrition-progress-card-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.popup-nutrition-progress-card ul {
+    margin-bottom: 25px;
+    padding-left: 50px;
+}
+
+.popup-nutrition-progress-card ul li {
+    margin-bottom: 10px;
+}
+
+#popup-nutrition-progress-card-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#popup-nutrition-progress-card-button button{
+    width: 120px;
+    height: 40px;
+    background-color: #DADADA;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.popup-nutrition-progress-card-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+
+
+/*eklemelr*/
+
+#popup-nutrition-progress-4 > .popup-nutrition-progress-card {
+    width: 550px;
+    padding-left: 40px;
+}
+
+.popup-nutrition-progress-card-conclusion-header{
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+.popup-nutrition-progress-card-conclusion-div ul{
+    padding: 0;
+    margin: 0px 0px 15px 0px;
+    display: inline-block;
+    padding: 15px 15px 0px 15px;
+    width: 470px;
+}
+
+.popup-nutrition-progress-card-conclusion-div ul li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.popup-nutrition-progress-card-conclusion-div ul li img{
+    margin-right: 5px;
+}
+
+.popup-nutrition-progress-card-conclusion-div ul {
+    background-color: #FFE7E7;
+    border-radius: 15px;
+}
+
+.popup-nutrition-progress-card-conclusion-div-radioes ul{
+    display: flex;
+    padding: 0;
+}
+
+.popup-nutrition-progress-card-conclusion-div-radioes ul li{
+    margin-right: 10px;
+}
+
+.popup-nutrition-progress-card-conclusion-full{
+    display: flex;
+    padding: 15px;
+    background-color: #AAFFB7;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
