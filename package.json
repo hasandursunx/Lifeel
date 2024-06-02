@@ -1,6 +1,20 @@
 {
   "dependencies": {
     "charts.css": "^1.1.0",
+    "express": "^4.19.2",
     "firebase": "^10.12.1"
+  },
+  "name": "lifeel",
+  "version": "1.0.0",
+  "description": "lifeel_projesi",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Hasan Dursun",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.2"
   }
 }
