@@ -79,9 +79,8 @@ body{
     align-items: center;
 }
 
-.main-form-bottom a {
+.main-form-bottom a , #login-button{
     display: flex;
-    align-items: center;
     justify-content: center;
     width: 280px;
     height: 45px;
@@ -91,10 +90,12 @@ body{
     font-weight: 800px;
     font-size: 16px;
     margin-bottom: 10px;
-
+    border: none;
+    cursor: pointer;
+    line-height: 45px;
 }
 
-.main-form-bottom a:first-child {
+.main-form-bottom #login-button {
     background-color: #2DCC39;
 }
 
@@ -102,7 +103,7 @@ body{
     background-color: #828282;
 }
 
-.main-form-bottom a:first-child:hover {
+.main-form-bottom #login-button:hover {
     background-color: #27b733;
 }
 

@@ -5,42 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Detayları</title>
     <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="/css/profile-detail.css">
+    
 </head>
 <body> 
-    <div class="header">
-        <div class="header-logo">
-            <a href="#">
-                <img id="header-logo-img" src="/images/lifeel-logo.png" alt="bu bir logodur.">
-                <h1 id="header-logo-title"> Lifeel </h1>
-            </a>
-        </div>
-        <div class="header-menu">
-            <ul>
-                <li><a href="#">Anasayfa</a></li>
-                <li><a href="#">Hizmetler</a></li>
-                <li><a href="#">Topluluk</a></li>
-                <li><a href="#">Hakkımızda</a></li>
-                <li><a href="#">İletişim</a></li>
-            </ul>
-        </div>
-        <div class="header-operations">
-            <a href="#">
-                <img id="header-operations-logo" src="/images/notifications-logo.png" alt="">
-            </a>
-            <a id="header-operations-button" href="#">HESABIM</a>
-        </div>
-    </div>
+    <%- include("partials/_header")%>
     <div class="main">
-        <div class="main-menu">
-            <ul>
-                <li><a href="#">Profil Görüntüle</a></li>
-                <li><a href="#">Profil Detayları</a></li>
-                <li><a href="#">Spor Programlarım</a></li>
-                <li><a href="#">Beslenme Programlarım</a></li>
-                <li><a href="#">Performans ve Analiz</a></li>
-            </ul>
-        </div>
+        <%- include("partials/_menu")%>
         <div class="main-vertical-stick"></div>
         <div class="main-profile-information">
             <div class="main-profile-information-top">
@@ -102,18 +75,16 @@
             <div class="main-profile-information-bot">
                 <h1>Alerjik Yiyecekler</h1>
                 <div class="main-profile-information-bot-cards">
+
+                    <% for (allergenicFood of allergenicFoods) { %>
                     <div class="main-profile-information-bot-card">
-                        <span>Domates</span>
+                        <span><%= allergenicFood.name %></span>
                         <a href="#">
                             <img src="/images/profile-detail-garbage.png" alt="">
                         </a>
                     </div>
-                    <div class="main-profile-information-bot-card">
-                        <span>Avakado</span>
-                        <a href="#">
-                            <img src="/images/profile-detail-garbage.png" alt="">
-                        </a>
-                    </div>
+                    <% } %>
+                    
                     <div id="main-profile-information-bot-card-last">
                          <img src="/images/profile-detail-plus.png" alt="Tıklayınız.">
                     </div>

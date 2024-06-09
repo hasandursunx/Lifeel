@@ -22,7 +22,7 @@ router.route("/register").get(getRegisterPage)
 router.route("/profile").get(getProfilePage)
 router.route("/profile-detail").get(getProfileDetailPage)
 router.route("/sports-programs").get(getSportsProgramsPage)
-router.route("/nutritions-programs").get(getNutritionProgramsPage)
+router.route("/nutrition-programs").get(getNutritionProgramsPage)
 router.route("/performance-and-analysis").get(getPerformanceAndAnalysisPage)
 
 export default router

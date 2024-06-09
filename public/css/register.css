@@ -73,7 +73,7 @@
     justify-items: center;
 }
 
-.right-side-middle  #email,#date,#password,select {
+.right-side-middle  #Email,#Date,#Password,select {
     font-family: "Mulish", sans-serif;
     font-size: 16px;
     width: 350px;
@@ -88,7 +88,7 @@
 
 }
 
-.right-side-middle  #isim,#soyisim {
+.right-side-middle  #Name,#Surname {
     font-family: "Mulish", sans-serif;
     font-size: 16px;
     width: 172px;

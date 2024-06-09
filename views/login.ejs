@@ -12,16 +12,16 @@
         <div class="main-form">
             <div class="main-form-top"><h1>Giriş</h1></div>
             <div class="main-form-middle">
-                <form action="#">
-                    <input type="text" name="text" id="text" placeholder="Eposta">
-                    <input type="text" name="text" id="text" placeholder="Şifre">
+                <form action="/users/login" method="POST" id="formid" >
+                    <input type="text" name="email" id="Email" placeholder="Eposta">
+                    <input type="text" name="password" id="Password" placeholder="Şifre">
                     <a href="#">Şifremi Unuttum</a>
                 </form>
             </div>
             <div class="main-form-bottom">
-                <a href="#">GİRİŞ YAP</a>
+                <button id="login-button" type="submit" form="formid">GİRİŞ YAP</button>
                 <span>Veya</span>
-                <a href="#">KAYIT OL</a>
+                <a href="/register">KAYIT OL</a>
             </div>
         </div>
     </div>

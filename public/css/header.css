@@ -1,0 +1,83 @@
+.header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    
+    background-color: #FCFCFF;
+    box-shadow: 1px 1px 5px #ababab;
+}
+.header-logo a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0px 15px 30px;
+    text-decoration: none;
+    color: black;
+
+}
+#header-logo-img{
+    width: 26px;
+    height: 27px;
+    margin-right: 5px;
+}
+#header-logo-title{
+    font-family: "Poppins", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.header-menu ul{
+    display: flex;
+}
+.header-menu ul li {
+    margin-right: 20px;
+}
+
+.header-menu ul li a {
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: #202142;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.header-menu ul li a:hover {
+    color: #9496cc;
+
+}
+
+.header-operations{
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header-operations-logo{
+    width: 28px;
+    height: 28px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    
+}
+#header-operations-button{
+    width: 110px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #202142;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+#header-operations-button:hover{
+
+    font-family: "Poppins", sans-serif;
+    background-color: #43447a;
+    
+}
