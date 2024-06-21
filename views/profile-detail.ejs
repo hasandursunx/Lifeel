@@ -18,55 +18,47 @@
         <div class="main-profile-information">
             <div class="main-profile-information-top">
                 <h1>Fiziksel Özelliklerim</h1>
-                <form action="#">
+                <form method="post" action="/users/<%=user._id%>?_method=PUT %>">
                     <div class="profile-information-top-form-input">
                         <span>Boy</span>
-                        <input disabled type="text" placeholder="183cm">
+                        <input  class="profile-detail-edit-action" disabled type="text"  value="<%= user.height %>"   placeholder="<%= user.height %>" >
                     </div>
                     <div class="profile-information-top-form-input">
                         <span>Kilo</span>
-                        <input disabled type="text" placeholder="84 kg">
+                        <input class="profile-detail-edit-action" disabled type="text" value="<%= user.weight %>"   placeholder="<%= user.weight %>" >
                     </div>
                     <div class="profile-information-top-form-input">
                         <span>Bel Ölçüsü</span>
-                        <input disabled type="text" placeholder="72 cm">
+                        <input class="profile-detail-edit-action" disabled type="text" value="<%= user.waistSize %>"   placeholder="<%= user.waistSize %>"  >
                     </div>
                     <div class="profile-information-top-form-input">
                         <span>Yağ Oranı</span>
-                        <input disabled type="text" placeholder="%15">
+                        <input class="profile-detail-edit-action" disabled type="text" value="<%= user.weight %>"   placeholder="<%= user.fatness %>"  > 
                     </div>
                     <div class="profile-information-top-form-input">
                         <span>V. K. Endeksi</span>
-                        <input disabled type="text" placeholder="24 kg/m²"><sup></sup>
+                        <input class="profile-detail-edit-action" disabled type="text" <% if(!(user.weight && user.height)) { %>  placeholder=" 0 kg/m²  "  <% }  else { %>  placeholder="<%= (user.weight/((user.height * user.height)/10000)).toFixed(1)  %> kg/m²" <% } %>  >
                     </div>
-                    <button type="submit">Düzenle</button>
+                    <button id="profile-detail-edit-button" type="button">Düzenle</button>
                 </form>
             </div>
+            
             <div class="main-profile-information-mid">
                 <h1>Hobiler ve Aktiviteler</h1>
                 <div class="main-profile-information-mid-cards">
+                    <% for (hobbyAndActivity of  hobbyAndActivities) { %>
                     <div class="main-profile-information-mid-card">
-                        <h3>Yüzme</h3>
+                        <h3><%= hobbyAndActivity.name %></h3>
                         <ul>
-                            <li> 2 saat </li>
-                            <li> 2 gün / Haftada </li>
+                            <li> <%= hobbyAndActivity.duration %> DAKİKA </li>
+                            <li> <%= hobbyAndActivity.times %> KEZ / <%= hobbyAndActivity.frequency %> </li>
                         </ul>
                         <div class="main-profile-information-mid-card-buttons">
                             <a href="#">Düzenle</a>
-                            <a href="#">Sil</a>
+                            <a href="/hobbyAndActivity/<%= hobbyAndActivity._id%>?_method=DELETE">Sil</a>
                         </div>
                     </div>
-                    <div class="main-profile-information-mid-card">
-                        <h3>Basketbol</h3>
-                        <ul>
-                            <li> 45 dakika </li>
-                            <li> 1 gün / Haftada </li>
-                        </ul>
-                        <div class="main-profile-information-mid-card-buttons">
-                            <a href="#">Düzenle</a>
-                            <a href="#">Sil</a>
-                        </div>
-                    </div>
+                    <% } %>
                     <div id="main-profile-information-mid-card-last">
                         <img src="/images/profile-detail-plus.png" alt="Tıklayınız.">
                     </div>
@@ -75,16 +67,14 @@
             <div class="main-profile-information-bot">
                 <h1>Alerjik Yiyecekler</h1>
                 <div class="main-profile-information-bot-cards">
-
-                    <% for (allergenicFood of allergenicFoods) { %>
+                    <% for (allergenicFood of  allergenicFoods) { %>
                     <div class="main-profile-information-bot-card">
-                        <span><%= allergenicFood.name %></span>
-                        <a href="#">
+                        <span><%= allergenicFood.name  %></span>
+                        <a href="/allergenicFood/<%= allergenicFood._id %>?_method=DELETE" >
                             <img src="/images/profile-detail-garbage.png" alt="">
                         </a>
                     </div>
                     <% } %>
-                    
                     <div id="main-profile-information-bot-card-last">
                          <img src="/images/profile-detail-plus.png" alt="Tıklayınız.">
                     </div>
@@ -94,21 +84,21 @@
     </div>
     <div class="popup-allergenic-foods">
         <div class="popup-allergenic-foods-card">
-            <form action="">
+            <form action="/allergenicFood" method="POST">
                 <div class="popup-allergenic-foods-card-form-text">
                     <label for="food-name-1">Yiyecek İsmi :</label>
-                    <input  id="food-name-1"type="text">
+                    <input  id="food-name-1"type="text" name="name">
                 </div>
                 <div class="popup-allergenic-foods-card-form-text">
                     <label for="food-name-2">Alerjik Tepkisi : </label>
-                    <input id="food-name-2" type="text">
+                    <input id="food-name-2" type="text" name="reaction">
                 </div>
                 <fieldset>
-                    <input type="radio" name="foodtype" id="meyve" > <label for="meyve"> Meyve </label>
-                    <input type="radio" name="foodtype" id="sebze" ><label for="sebze"> Sebze </label>
-                    <input type="radio" name="foodtype" id="baharat"><label for="baharat"> Baharat </label>
-                    <input type="radio" name="foodtype" id="et"><label for="et"> Et ve Süt Ürünleri </label>
-                    <input type="radio" name="foodtype" id="diger"><label for="diger"> Diğer </label>
+                    <input type="radio" name="type" id="meyve" > <label for="meyve"> Meyve </label>
+                    <input type="radio" name="type" id="sebze" ><label for="sebze"> Sebze </label>
+                    <input type="radio" name="type" id="baharat"><label for="baharat"> Baharat </label>
+                    <input type="radio" name="type" id="et"><label for="et"> Et ve Süt Ürünleri </label>
+                    <input type="radio" name="type" id="diger"><label for="diger"> Diğer </label>
                 </fieldset>
                 <div class="popup-allergenic-foods-card-form-button">
                     <button type="submit">EKLE</button>
@@ -119,10 +109,10 @@
     </div>
     <div class="popup-hobby-and-activities">
         <div class="popup-hobby-and-activities-card">
-            <form action="">
+            <form  action="/hobbyAndActivity" method="POST">
                 <div class="popup-hobby-and-activities-card-form-text">
                     <label for="food-name-1">Aktivite Seçin :</label>
-                    <select id="activities" name="activities">
+                    <select id="activities" name="name">
                         <option value="basketbol">Basketbol</option>
                         <option value="futbol">Futbol</option>
                         <option value="tenis">Tenis</option>
@@ -132,25 +122,25 @@
                 </div>
                 <div class="popup-hobby-and-activities-card-form-text">
                     <label for="food-name-2">Sıklık Derecesi : </label>
-                    <select id="cars" name="cars">
+                    <select id="cars" name="frequency" name="frequency">
                         <option selected value="gün">Günde</option>
                         <option value="hafta">Haftada</option>
                         <option value="ay">Ayda</option>
                         <option value="yıl">Yılda</option>
                       </select>
-                      <select id="cars" name="cars">
-                        <option  selected value="1">1 Kez</option>
+                      <select id="times"  name="times">
+                        <option  value="1">1 Kez</option>
                         <option value="2">2 Kez</option>
                         <option value="3">3 Kez</option>
                         <option value="4">4 Kez</option>
                         <option value="5">5 Kez</option>
                         <option value="6">6 Kez</option>
-                        <option value="1">7+ Kez</option>
+                        <option value="7+">7+ Kez</option>
                       </select>
                 </div>
                 <div class="popup-hobby-and-activities-card-form-text">
                     <label for="food-name-1">Kaç Dakika :</label>
-                    <input type="number" min="0" max="240">
+                    <input name="duration" type="number" min="0" max="240"  >
                 </div>
                 <div class="popup-hobby-and-activities-card-form-button">
                     <button type="submit">EKLE</button>
@@ -160,5 +150,6 @@
         </div>
     </div>
     <script src="/js/popup.js"></script>
+    <script src="/js/button-action.js"></script>
 </body>
 </html>

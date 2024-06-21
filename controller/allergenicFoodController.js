@@ -2,11 +2,13 @@ import AllergenicFood from "../models/allergenicFoodModel.js"
 
 const createAllergenicFood = async (req,res) => {
     try{
-        const allergenicFood = await AllergenicFood.create(req.body)
-        res.status(201).json({
-            succeded:true,
-            allergenicFood,
+        await AllergenicFood.create({
+            name:req.body.name,
+            reaction: req.body.reaction,
+            type: req.body.type,
+            user: res.locals.user._id
         })
+        res.status(201).redirect("/profile-detail")
     }
     catch(error){
         res.status(500).json({
@@ -18,10 +20,10 @@ const createAllergenicFood = async (req,res) => {
 
 const getAllAllergenicFoods = async (req,res) =>{
     try{
-        const allergenicFoods = await AllergenicFood.find({})
-        res.status(200).render("profile-detail",
+        const allergenicFood = await AllergenicFood.findById({ _id: req.params.id})
+        res.status(200).render("allergenic",
             {
-                allergenicFoods
+                allergenicFood
             })
     } catch(error){
         res.status(500).json({
@@ -31,4 +33,22 @@ const getAllAllergenicFoods = async (req,res) =>{
     }
 }
 
-export { createAllergenicFood , getAllAllergenicFoods}
+
+
+
+const deleteAllergenicFood = async (req,res) => {
+    try {
+        
+        await AllergenicFood.findOneAndDelete({ _id: req.params.id})
+
+        res.status(200).redirect("/profile-detail")
+
+    } catch (error) {
+        res.status(500).json({
+            succeded: false,
+            error
+        })
+    }
+}
+
+export { createAllergenicFood , getAllAllergenicFoods, deleteAllergenicFood}

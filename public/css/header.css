@@ -64,7 +64,8 @@
     
 }
 #header-operations-button{
-    width: 110px;
+    font-size: 15px;
+    width: 120px;
     height: 40px;
     border-radius: 10px;
     background-color: #202142;

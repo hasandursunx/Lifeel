@@ -19,7 +19,7 @@
         <div class="main-profile-information">
             <div class="main-profile-information-left">
                 <img src="/images/profile-avatar.png" alt="">
-                <span>Hasan Dursun</span>
+                <span><%= user.name %> <%= user.surname %></span>
                 <a href="#">ŞİFRE DEĞİŞTİR</a>
             </div>
             <div class="main-profile-information-right">
@@ -27,27 +27,27 @@
                     <div class="main-profile-information-right-form-top">
                         <div id="main-profile-information-right-form-top-name">
                             <span>İsim</span>
-                            <input disabled type="text" placeholder="Hasan">
+                            <input disabled type="text" placeholder="<%= user.name %>">
                         </div>
                         <div id="main-profile-information-right-form-top-surname">
                             <span>Soyisim</span>
-                            <input disabled type="text" placeholder="Dursun">
+                            <input disabled type="text" placeholder="<%= user.surname %>">
                         </div>
                     </div>
                     <div class="main-profile-information-right-form-mid">
                         <div id="main-profile-information-right-form-mid-email">
                             <span>Eposta</span>
-                            <input  disabled type="email" placeholder="hayatihisset@lifeel.com">
+                            <input  disabled type="email" placeholder="<%= user.email %>">
                         </div>
                     </div>
                     <div class="main-profile-information-right-form-bot">
                         <div id="main-profile-information-right-form-bot-name">
                             <span>Doğum Tarihi</span>
-                            <input disabled ="date" value="2000-01-01">
+                            <input disabled ="date" value="<%= new Date(user.date).getFullYear()%>">
                         </div>
                         <div id="main-profile-information-right-form-top-surname">
                             <span>Cinsiyet</span>
-                            <input disabled type="text" placeholder="Erkek">
+                            <input disabled type="text" placeholder="<%= user.gender %>">
                         </div>
                     </div>
                     <button type="submit">Profil Düzenle</button>

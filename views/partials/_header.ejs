@@ -14,10 +14,16 @@
             <li><a href="#">İletişim</a></li>
         </ul>
     </div>
-    <div class="header-operations">
+    <% if(user) { %>
+    <div class="header-operations" >
         <a href="#">
             <img id="header-operations-logo" src="/images/notifications-logo.png" alt="">
         </a>
-        <a id="header-operations-button" href="#">HESABIM</a>
+        <a id="header-operations-button" href="/logout">Oturum Kapat</a>
     </div>
+    <% } else { %>
+        <div class="header-operations" >
+            <a id="header-operations-button" href="/login">Giriş Yap</a>
+        </div>
+    <% } %>
 </div>
